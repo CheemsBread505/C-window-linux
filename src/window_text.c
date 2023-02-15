@@ -1,4 +1,5 @@
-//to run use "gcc window.c -o window -lX11 -g".
+//to compile the app
+//gcc window_text.c -o window_text -lX11 -g
 
 #include <X11/Xlib.h>
 #include <stdio.h>
@@ -19,7 +20,7 @@ int main() {
     unsigned long background_color = WhitePixel(display, screen_num);
     Window window = XCreateSimpleWindow(display, root_window, 0, 0, 200, 200, 2, border_color, background_color);
 
-    XStoreName(display, window, "My Window Title");
+    XStoreName(display, window, "Texts");
 
     XSelectInput(display, window, ExposureMask | KeyPressMask);
     XMapWindow(display, window);
